@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Primary Font Family */
+@font-face {
+  font-family: "Ginora Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ginora Sans"),
+    url("https://fonts.cdnfonts.com/s/18654/Ginóra Sans Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Ginora Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ginora Sans"),
+    url("https://fonts.cdnfonts.com/s/18654/Ginóra Sans Semi Bold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Ginora Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Ginora Sans"),
+    url("https://fonts.cdnfonts.com/s/18654/Ginóra Sans Bold.woff")
+      format("woff");
+}
+
+/* Secondary Font Family */
+@font-face {
+  font-family: "Gilroy-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Regular"),
+    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff") format("woff");
+}
+
+/* Start Home */
+.collapsed-menu {
+  @apply flex justify-center md:hidden bg-secondary absolute right-0 left-0 top-[104px] overflow-hidden h-0 transition-all duration-1000;
+}
+
+.open {
+  @apply h-52;
+}
+
+.main-banner {
+  @apply bg-main-banner-sm md:bg-main-banner bg-cover bg-no-repeat pb-12 md:pb-10 pt-24 md:pt-44;
+}
+
+.section-title {
+  @apply capitalize text-3xl sm:text-4xl md:text-[62px] leading-[44px] md:leading-[74px];
+}
+
+p {
+  @apply font-secondary text-secondary-text
+}
+
+.home-section {
+  @apply container mt-52 flex flex-wrap lg:flex-nowrap items-center gap-14;
+}
+
+.view-link {
+  @apply flex items-center gap-1 uppercase text-[#99a9ff] mt-8 w-44 hover:gap-3 transition-all duration-700;
+}
+
+@layer components {
+  .top-sep {
+    @apply before:content-[''] before:block before:bg-border-gradient before:h-px before:xl:h-[2px] before:bg-no-repeat before:bg-cover;
+  }
+}
+
+.right-sep {
+  @apply before:content-[''] before:block before:bg-left-sep before:bg-no-repeat before:bg-cover before:w-px before:h-[992px];
+}
+
+.input {
+  @apply w-[100%] md:w-[466px] border-0 border-b-2 border-b-[#565656] bg-transparent outline-none text-secondary-text text-sm md:text-2xl pb-5 indent-8;
+}
+
+.input-under-line {
+  @apply relative after:content-[''] after:block after:absolute after:bottom-0 after:left-8 after:h-[3px] after:w-20 after:bg-gradient-to-r after:from-[#99a9ff] after:to-[#5CE4CF];
+}
